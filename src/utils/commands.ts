@@ -8,8 +8,8 @@ const hostname = window.location.hostname;
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   pomoc: () => 'Available commands: ' + Object.keys(commands).join(', '),
   hostname: () => hostname,
-  whoami: () => 'guest',
-  date: () => new Date().toLocaleString(),
+  o_mnie: () => 'Programista z pasją, który może pracować w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, SQLite, PostGresql, Bash, GCP, i Vercel',
+  data: () => new Date().toLocaleString(),
   vi: () => `dlaczego używasz vi? używaj 'emacs'`,
   vim: () => `dlaczego używasz vim? używaj 'emacs'`,
   emacs: () => `dlaczego używasz emacs? używaj 'vim'`,
@@ -83,7 +83,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 
     //return 'Opening donation url...';
   //},
-  weather: async (args: string[]) => {
+  pogoda: async (args: string[]) => {
     const city = args.join('+');
 
     if (!city) {
@@ -121,7 +121,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 | | ___________ | |  ██╔══██║██║     ██╔══╝  ██╔═██╗ ╚════██║     ███╔╝  
 | |_____________| |  ██║  ██║███████╗███████╗██║  ██╗███████║    ███████╗
 |    |       |   ||  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝    ╚══════╝
-| DD |       |   V|                                                         © 2024
+|    |       |   V|                                                © 2024
 |____|_______|____| 
 
 Wpisz „pomoc”, aby wyświetlić listę dostępnych poleceń.

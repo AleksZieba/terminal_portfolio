@@ -87,7 +87,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const city = args.join('+');
 
     if (!city) {
-      return 'Zastosowanie: pogoda [city]. Przykład: pogoda Bruksela';
+      return 'Zastosowanie: weather [city]. Przykład: weather Cracow';
     }
 
     const weather = await fetch(`https://wttr.in/${city}?ATm`);
@@ -110,7 +110,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 
       return data;
     } catch (error) {
-      return `curl: could not fetch URL ${url}. Details: ${error}`;
+      return `curl: nie można pobrać adresu URL ${url}. Szczegóły: ${error}`;
     }
   },
   banner: () => `

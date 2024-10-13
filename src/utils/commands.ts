@@ -63,11 +63,11 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
       }
     }
   },
-  repo: () => {
-    window.open(packageJson.repository.url, '_blank');
+  //repo: () => {
+    //window.open(packageJson.repository.url, '_blank');
 
-    return 'Opening repository...';
-  },
+    //return 'Opening repository...';
+  //},
   clear: () => {
     history.set([]);
 

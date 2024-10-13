@@ -36,7 +36,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     switch (args[0]) {
       case 'ls': {
         let result = themes.map((t) => t.name.toLowerCase()).join(', ');
-        result += 'to wszystko...'
+        result += ' to wszystko...'
           
           //`Możesz podglądąć wszystkie motywy tutaj: ${packageJson.repository.url}/tree/master/docs/themes`;
 

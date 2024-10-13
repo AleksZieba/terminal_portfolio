@@ -23,11 +23,11 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const usage = `Usage: theme [args].
     [args]:
       ls: lista wszystkich dostępnych motywów
-      zmień: zmien motyw na [motyw]
+      set: zmien motyw na [motyw]
 
     [Przykłady]:
       motyw ls
-      motyw zmień dracula
+      motyw set dracula
     `;
     if (args.length === 0) {
       return usage;

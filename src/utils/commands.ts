@@ -10,14 +10,14 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
   hostname: () => hostname,
   whoami: () => 'guest',
   date: () => new Date().toLocaleString(),
-  vi: () => `why use vi? try 'emacs'`,
-  vim: () => `why use vim? try 'emacs'`,
-  emacs: () => `why use emacs? try 'vim'`,
+  vi: () => `dlaczego używasz vi? używaj 'emacs'`,
+  vim: () => `dlaczego używasz vim? używaj 'emacs'`,
+  emacs: () => `dlaczego używasz emacs? używaj 'vim'`,
   echo: (args: string[]) => args.join(' '),
   sudo: (args: string[]) => {
     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 
-    return `Permission denied: unable to run the command '${args[0]}' as root.`;
+    return `Odmowa uprawnień: nie można uruchomić polecenia '${args[0]}' jako root.`;
   },
   theme: (args: string[]) => {
     const usage = `Usage: theme [args].
@@ -114,12 +114,13 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     }
   },
   banner: () => `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
+#   █████╗ ██╗     ███████╗██╗  ██╗███████╗      ██████╗  ██████╗ ███████╗
+#  ██╔══██╗██║     ██╔════╝██║ ██╔╝██╔════╝      ██╔══██╗██╔═══██╗██╔════╝
+#  ███████║██║     █████╗  █████╔╝ ███████╗█████╗██║  ██║██║   ██║███████╗
+#  ██╔══██║██║     ██╔══╝  ██╔═██╗ ╚════██║╚════╝██║  ██║██║   ██║╚════██║
+#  ██║  ██║███████╗███████╗██║  ██╗███████║      ██████╔╝╚██████╔╝███████║
+#  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝      ╚═════╝  ╚═════╝ ╚══════╝
+#                                                                         © 2024
 
 Type 'help' to see list of available commands.
 `,

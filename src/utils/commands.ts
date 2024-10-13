@@ -87,7 +87,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const city = args.join('+');
 
     if (!city) {
-      return 'Zastosowanie: pogoda [imię miasta po angielsku]. Przykład: pogoda Cracow';
+      return 'Zastosowanie: pogoda [city]. Przykład: pogoda Cracow';
     }
 
     const weather = await fetch(`https://wttr.in/${city}?ATm`);

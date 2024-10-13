@@ -7,7 +7,7 @@ const hostname = window.location.hostname;
 
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   pomoc: () => 'Dostępne polecenia: ' + Object.keys(commands).join(', '),
-  hostname: () => hostname' Sprawdź pogodę za pomocą polecenia „pogoda” ;-)',
+  hostname: () => hostname + ' Sprawdź pogodę za pomocą polecenia „pogoda” ;-)',
   o_mnie: () => 'Programista z pasją, który pracuje w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, SQLite, PostGresql, Bash, GCP, i Vercel',
   data: () => new Date().toLocaleString(),
   vi: () => `dlaczego używasz vi? używaj emacs`,

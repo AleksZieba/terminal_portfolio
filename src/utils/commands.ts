@@ -23,11 +23,11 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const usage = `Usage: theme [args].
     [args]:
       ls: lista wszystkich dostępnych motywów
-      set: ustaw motyw na [motyw]
+      zmień: zmien motyw na [motyw]
 
     [Przykłady]:
       motyw ls
-      motyw set dracula
+      motyw zmień dracula
     `;
     if (args.length === 0) {
       return usage;
@@ -50,12 +50,12 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
         const t = themes.find((t) => t.name.toLowerCase() === selectedTheme);
 
         if (!t) {
-          return `Theme '${selectedTheme}' not found. Try 'theme ls' to see all available themes.`;
+          return `Motyw '${selectedTheme}' nie znaleziono. Wypróbuj „motyw ls”, aby zobaczyć wszystkie dostępne motywy.`;
         }
 
         theme.set(t);
 
-        return `Theme set to ${selectedTheme}`;
+        return `Motyw zmieniony na ${selectedTheme}`;
       }
 
       default: {

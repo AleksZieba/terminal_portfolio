@@ -1,13 +1,13 @@
 {
   "name": "terminal",
   "private": true,
-  "version": "3.3.3",
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "author": {
-    "name": "Yassine Fathi",
-    "url": "https://fathi.me",
-    "email": "yassine@fathi.me"
+    "name": "Aleks Zięba",
+    "url": "lepszyangielski.pl",
+    "email": "aleks@lepszyangielski.pl"
   },
   "funding": {
     "type": "Paypal",

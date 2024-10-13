@@ -6,7 +6,7 @@ import { theme } from '../stores/theme';
 const hostname = window.location.hostname;
 
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
-  help: () => 'Available commands: ' + Object.keys(commands).join(', '),
+  pomoc: () => 'Available commands: ' + Object.keys(commands).join(', '),
   hostname: () => hostname,
   whoami: () => 'guest',
   date: () => new Date().toLocaleString(),
@@ -122,6 +122,6 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 #  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝      ╚═════╝  ╚═════╝ ╚══════╝
 #                                                                         © 2024
 
-Type 'help' to see list of available commands.
+Wpisz „pomoc”, aby wyświetlić listę dostępnych poleceń.
 `,
 };

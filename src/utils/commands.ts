@@ -8,7 +8,7 @@ const hostname = window.location.hostname;
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   pomoc: () => 'Dostępne polecenia: ' + Object.keys(commands).join(', '),
   hostname: () => hostname + ' Sprawdź pogodę za pomocą polecenia „pogoda” ;-)',
-  o_mnie: () => 'Programista z pasją, który pracuje w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, SQLite, PostGresql, Bash, GCP, i Vercel',
+  o_mnie: () => 'Programista z pasją, który pracuje w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, Git, mySQL, PostGresql, Bash, GCP, i Vercel',
   data: () => new Date().toLocaleString(),
   vi: () => `dlaczego używasz vi? używaj emacs`,
   vim: () => `dlaczego używasz vim? używaj emacs`,
@@ -19,15 +19,15 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 
     return `Odmowa uprawnień: nie można uruchomić polecenia '${args[0]}' jako root.`;
   },
-  theme: (args: string[]) => {
+  motyw: (args: string[]) => {
     const usage = `Usage: theme [args].
     [args]:
-      ls: list all available themes
-      set: set theme to [theme]
+      ls: lista wszystkich dostępnych motywów
+      set: ustaw motyw na [motyw]
 
-    [Examples]:
-      theme ls
-      theme set gruvboxdark
+    [Przykłady]:
+      motyw ls
+      motyw set dracula
     `;
     if (args.length === 0) {
       return usage;
@@ -87,7 +87,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const city = args.join('+');
 
     if (!city) {
-      return 'Zastosowanie: pogoda [city]. Przykład: pogoda Cracow';
+      return 'Zastosowanie: pogoda [miasto w języku angielskim]. Przykład: pogoda Cracow';
     }
 
     const weather = await fetch(`https://wttr.in/${city}?ATm`);

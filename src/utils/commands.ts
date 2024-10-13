@@ -6,13 +6,13 @@ import { theme } from '../stores/theme';
 const hostname = window.location.hostname;
 
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
-  pomoc: () => 'Available commands: ' + Object.keys(commands).join(', '),
-  hostname: () => hostname,
-  o_mnie: () => 'Programista z pasją, który może pracować w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, SQLite, PostGresql, Bash, GCP, i Vercel',
+  pomoc: () => 'Dostępne polecenia: ' + Object.keys(commands).join(', '),
+  hostname: () => hostname' Sprawdź pogodę za pomocą polecenia „pogoda” ;-)',
+  o_mnie: () => 'Programista z pasją, który pracuje w: HTML, CSS, React, Javascript, Typescript, Node.js, Express.js, SQLite, PostGresql, Bash, GCP, i Vercel',
   data: () => new Date().toLocaleString(),
-  vi: () => `dlaczego używasz vi? używaj 'emacs'`,
-  vim: () => `dlaczego używasz vim? używaj 'emacs'`,
-  emacs: () => `dlaczego używasz emacs? używaj 'vim'`,
+  vi: () => `dlaczego używasz vi? używaj emacs`,
+  vim: () => `dlaczego używasz vim? używaj emacs`,
+  emacs: () => `dlaczego używasz emacs? używaj vim`,
   echo: (args: string[]) => args.join(' '),
   sudo: (args: string[]) => {
     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
@@ -87,7 +87,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
     const city = args.join('+');
 
     if (!city) {
-      return 'Zastosowanie: weather [city]. Przykład: weather Cracow';
+      return 'Zastosowanie: pogoda [imię miasta po angielsku]. Przykład: pogoda Cracow';
     }
 
     const weather = await fetch(`https://wttr.in/${city}?ATm`);
